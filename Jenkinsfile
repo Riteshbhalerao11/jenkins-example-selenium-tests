@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Verify browsers are installed') {
       steps {
-        bat 'google-chrome --version'
+        bat 'wmic datafile where name="C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" get Version /value'
       }
     }
     stage('Run Tests') {
