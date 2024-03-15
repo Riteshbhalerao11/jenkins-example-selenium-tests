@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('Verify browsers are installed') {
       steps {
-        sh 'google-chrome --version'
+        bat 'google-chrome --version'
       }
     }
     stage('Run Tests') {
       steps {
-        sh './mvnw clean test'
+        bat './mvnw clean test'
       }
     }
   }
